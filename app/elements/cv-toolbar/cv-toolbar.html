@@ -1,0 +1,93 @@
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="cv-toolbar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      #fontSizeList {
+        max-width: 50px;
+      }
+
+      #fontStyleList {
+        max-width: 180px;
+      }
+
+      #paperSizeList {
+        max-width: 50px;
+      }
+    </style>
+    <paper-material elevation="1">
+        <paper-icon-button icon="icons:file-download"></paper-icon-button>
+        <paper-dropdown-menu id="fontSizeList">
+          <paper-listbox class="dropdown-content">
+            <paper-item>
+                <div style="font-style:courier new;">11</div>
+            </paper-item>
+              <paper-item>
+                <div style="font-style:verdana;">10</div>
+              </paper-item>
+            <paper-item>
+              <div style="font-style:times new roman;">9</div>
+            </paper-item>
+            <paper-item>
+                <div style="font-style:comic sans;">8</div>
+            </paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+        <paper-dropdown-menu id="fontStyleList">
+          <paper-listbox class="dropdown-content">
+            <paper-item>
+                <div style="font-style:courier new;">courier new</div>
+            </paper-item>
+              <paper-item>
+                <div style="font-style:verdana;">verdana</div>
+              </paper-item>
+            <paper-item>
+              <div style="font-style:times new roman;">times new roman</div>
+            </paper-item>
+            <paper-item>
+                <div style="font-style:comic sans;">comic sans</div>
+            </paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+        <paper-dropdown-menu id="paperSizeList">
+          <paper-listbox class="dropdown-content">
+            <paper-item>
+                <div style="font-style:courier new;">A4</div>
+            </paper-item>
+              <paper-item>
+                <div style="font-style:verdana;">A5</div>
+              </paper-item>
+            <paper-item>
+              <div style="font-style:times new roman;">A6</div>
+            </paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+        <paper-icon-button icon="icons:add"></paper-icon-button>
+
+
+      </paper-material>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'cv-toolbar'
+    });
+  </script>
+</dom-module>
