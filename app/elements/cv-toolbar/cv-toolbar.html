@@ -17,6 +17,17 @@ Example:
 <dom-module id="cv-toolbar">
   <template>
     <style>
+      #toolbar {
+        position: fixed;
+        top: 14%;
+        margin: 0%;
+        margin-left: 1%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+
+
+
       :host {
         display: block;
       }
@@ -31,10 +42,11 @@ Example:
       #paperSizeList {
         max-width: 50px;
       }
+
     </style>
-    <paper-material elevation="1">
+    <paper-material id='toolbar' elevation="1">
         <paper-icon-button icon="icons:file-download"></paper-icon-button>
-        <paper-dropdown-menu id="fontSizeList">
+        <paper-dropdown-menu id="fontSizeList" label="11">
           <paper-listbox class="dropdown-content">
             <paper-item>
                 <div style="font-style:courier new;">11</div>
@@ -50,7 +62,7 @@ Example:
             </paper-item>
           </paper-listbox>
         </paper-dropdown-menu>
-        <paper-dropdown-menu id="fontStyleList">
+        <paper-dropdown-menu id="fontStyleList"  label="courier new">
           <paper-listbox class="dropdown-content">
             <paper-item>
                 <div style="font-style:courier new;">courier new</div>
@@ -66,7 +78,7 @@ Example:
             </paper-item>
           </paper-listbox>
         </paper-dropdown-menu>
-        <paper-dropdown-menu id="paperSizeList">
+        <paper-dropdown-menu id="paperSizeList"   label="A4">
           <paper-listbox class="dropdown-content">
             <paper-item>
                 <div style="font-style:courier new;">A4</div>

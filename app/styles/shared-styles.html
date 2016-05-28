@@ -31,25 +31,77 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       paper-toolbar {
         background-color: #EEEEEE;
+        color: #5F1010;
+        height: 14%;
       }
 
-      #cvBody {
-        background-color: #EEEEEE;
+      #paperToggle {
+        /*margin-top: 6%;*/
+        /*margin-left: -5%;*/
       }
 
-      #cvBody > section {
-        background-color: white;
-      }
 
       paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
         pointer-events: none;
+      }
+
+      
+
+
+
+      #drawerToolbarImage {
+        padding:0px;
+        margin-right: 0px;
+      }
+
+      @media (min-width: 601px) {
+        cv-toolbar {
+          background-color: red;
+        }
+
+        /*iron-image {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            margin-left: 25%;
+        }*/
+
+        iron-pages:not([style-scope]):not(.style-scope) {
+            padding: 0px 0px;
+            padding-top: 48px;
+        }
+
+
+        .paper-drawer-panel-0 paper-icon-button {
+             display: block; 
+        }
+
+
       }
 
       @media (max-width: 600px) {
         .page-title {
           font-size: 24px!important;
         }
+
+        iron-image img {
+          width: 100%;
+          height: 100%;
+        }
+
+       
+        iron-pages:not([style-scope]):not(.style-scope) {
+            padding: 0px 0px;
+            padding-top: 48px;
+            min-width: 100%;
+        }
+
       }
+
+      #topBar {
+        padding: 0px!important;
+      }
+
     </style>
   </template>
 </dom-module>
