@@ -24,6 +24,61 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           background: var(--light-primary-color);
         }
       }
+  
+       #rightNavPanel{
+        position: fixed;
+        top: 14%;
+        margin: 0%;
+        margin-right: 1%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+
+      #drawerHeadings {
+        margin-top: -60px;
+        position: fixed;
+        height: 7%;
+        z-index: 11;
+        background-color: #EEEEEE;
+        margin-left: 0px;
+        border-bottom: outset;
+      }
+  
+      .buttonsBar {
+        max-height: 10px;
+      }
+
+      .themeHeader iron-icon {
+        padding-left:1%;
+        /*float: right;*/
+      }
+
+      .themeHeader {
+        width: 100%;
+        position: fixed;
+        min-height: 10px;
+        border-bottom: outset;
+        border-top: outset;
+        z-index: 11;
+        background-color: #EEEEEE;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        min-height: 12%;
+      }
+
+      .themeClass p {
+         background-color: white!important;
+         padding: 15%;
+      }
+
+      #mainContainer {
+        background-color: #EEEEEE;
+      }
+
+      #mainContainer .themeBody{
+        padding: 0px;
+        background-color: #EEEEEE;
+      }
 
       body {
         background-color: #EEEEEE;
@@ -35,10 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: 14%;
       }
 
-      #paperToggle {
-        /*margin-top: 6%;*/
-        /*margin-left: -5%;*/
-      }
+      
 
 
       paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
@@ -46,7 +98,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       
+      #mainContainer {
+        background-color: #EEEEEE;
+      }
 
+      #mainContainer {
+        background-color: #EEEEEE;
+      }
 
 
       #drawerToolbarImage {
@@ -76,6 +134,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
              display: block; 
         }
 
+        .buttonsBar:not([style-scope]):not(.style-scope) {
+          /* max-height: 10px; */
+          display:none;
+        }
+
+        .buttonsBar:not([style-scope]):not(.style-scope) {
+          /* max-height: 10px; */
+          display:none;
+        }
+
+        #paper-drawer-toggle {
+          display:none;
+        }
 
       }
 
@@ -84,11 +155,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-size: 24px!important;
         }
 
+        #paper-drawer-toggle {
+          /*display: block;*/
+        }
+
         iron-image img {
           width: 100%;
           height: 100%;
         }
 
+        .buttonsBar:not([style-scope]):not(.style-scope) {
+          /* max-height: 10px; */
+          top: 10px;
+          position: fixed;
+          right: 6%;
+          float: right;
+        }
        
         iron-pages:not([style-scope]):not(.style-scope) {
             padding: 0px 0px;
