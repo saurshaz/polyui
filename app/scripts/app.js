@@ -40,6 +40,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function () {
     // imports are loaded and elements have been registered
+
+    // Scroll page to top and expand header
+    var d = document.querySelector('paper-drawer-panel')
+    var buttonsPanel = document.querySelector('#buttonsBar')
+
+    if (d.selected !== 'main') {
+      buttonsPanel.style.display = 'none'
+    } else {
+      buttonsPanel.style.display = 'block'
+    }
+
+    d.addEventListener('iron-select', function (obj) {
+      if (obj.target.selected !== 'main') {
+        buttonsPanel.style.display = 'none'
+      } else {
+        buttonsPanel.style.display = 'block'
+      }
+    })
   })
 
   // Main area's paper-scroll-header-panel custom condensing transformation of
@@ -69,13 +87,4 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // Scale middleContainer appName
     Polymer.Base.transform('scale(' + scaleMiddle + ') translateZ(0)', appName)
   })
-
-  // Scroll page to top and expand header
-  app.scrollPageToTop = function () {
-    // app.$.headerPanelMain.scrollToTop(true)
-  }
-
-  app.closeDrawer = function () {
-    app.$.paperDrawerPanel.closeDrawer()
-  }
 })(document)
