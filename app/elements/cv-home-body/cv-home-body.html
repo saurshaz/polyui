@@ -10,16 +10,36 @@
         border-style: inset;
         margin-top: 76px;
         position: fixed;
-        height: 60%;
+        height: 100%;
         background-color: #EEEEEE;
         z-index: -1;
       }
 
-      #cvBody section{
-        border-style: inset;
-        background-color: white;
-        height: 90%;
-        width: 100%;
+
+      @media (min-width: 600px) {
+        #cvBody section{
+          border-style: inset;
+          background-color: white;
+          height: 190%;
+          width: 60%;
+          margin-left: 10%;
+          /*margin-right: 15%;*/
+        }
+      }
+
+      
+      @media (max-width: 600px) {
+        #cvBody section{
+          border-style: inset;
+          background-color: white;
+          height: 190%;
+          width: 100%;
+          margin-left: 0%; 
+        /*margin-right: 15%;*/
+        }
+        #cvBody.cv-home-body {}
+           margin-left: 0%; 
+        }
       }
 
 
